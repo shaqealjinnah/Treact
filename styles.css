@@ -8,7 +8,7 @@
 }
 
 main {
-    padding: 32px 32px 0;
+    padding: 0 32px 0;
 }
 
 ul {
@@ -47,21 +47,23 @@ img {
     color: rgba(100,21,255);
     letter-spacing: 0.1em;
     font-weight: 700;
+    margin-bottom: 8px;
+
 }
 
 .heading {
     font-size: 48px;
     font-weight: 900;
     color: #243e63;
-    margin: 24px 0;
+    margin: 16px 0 16px;
     letter-spacing: 0.025em;
 }
 
 .para {
-    margin-top: 12px;
-    font-size: 16px;
+    /* margin-top: 12px; */
+    font-size: 18px;
     color: #7c8ba1;
-    line-height: 2;
+    line-height: 1.625;
     font-weight: 500;
 }
 
@@ -154,13 +156,12 @@ HEADER
 }
 
 .header__description {
-    width: 40%;
+    width: 41.667%;
 }
 
 .header__heading {
     font-weight: 700;
     font-size: 3rem;
-    letter-spacing: 0.025em;
     line-height: 1.25;
 }
 
@@ -168,6 +169,7 @@ HEADER
     font-size: 1.125rem;
     margin: 2rem 0;
     line-height: 27px;
+    color: #243e63;
 }
 
 .header__trust {
@@ -179,6 +181,7 @@ HEADER
     letter-spacing: 0.05em;
     font-weight: 700;
     color: #A0AEC0;
+    text-transform: uppercase;
 }
 
 .header__trust-badges {
@@ -189,11 +192,12 @@ HEADER
 }
 
 .header__img--wrapper {
-    width: 60%;
+    flex: 1 1 0%;
 }
 
 .header__img {
     max-width: 48rem;
+    width: 100%;
 }
 
 .header__form {
@@ -205,16 +209,22 @@ HEADER
     padding: 1.25rem 12rem 1.25rem 2rem;
     width: 100%;
     border-radius: 50px;
-    border: 2px solid #e5e7eb;
+    border: 2px solid #e2e8f0;
     border-width: 2px;
     font-weight: 500;
-    color:#e5e7eb;
+    color: #243e63;
     font-size: 100%;
 
 }
 
+::placeholder, .header__input {
+    opacity: 1;
+    color: rgb(203, 213, 224);
+}
+
 .header__button {
-    padding: 16px 32px;
+    padding: 16px 0;
+    width: 10rem;
     background-color: rgba(100,21,255);
     border-radius: 50px;
     color: #fff;
@@ -227,6 +237,9 @@ HEADER
     margin: 8px 0;
     margin-right: 0.5rem;
     font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* 
@@ -261,18 +274,24 @@ FEATURES
 .services {
     display: flex;
     flex-wrap: wrap;
+    max-width: 1024px;
+    margin: 0 auto;
+    justify-content: flex-end;
 }
 
 .service {
     display: flex;
-    width: calc(100%/3);
+    width: 30%;
+    max-width: 24rem;
+    padding: 2rem 0.5rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
 
 .service__description {
     display: flex;
     flex-direction: column;
-    margin: 8px 24px 0 24px;
-    padding: 32px 0;
+    margin: 8px 0 0 16px;
 }
 
 .service__icon {
@@ -281,17 +300,17 @@ FEATURES
     border: 1px solid #e5e7eb;
     padding: 20px;
     border-radius: 50px;
-    margin-top: 32px;
 }
 
 .service__title {
     font-size: 24px;
     font-weight: 700;
     color: #243e63;
+    letter-spacing: 0.025em;
 }
 
 .service__para {
-    margin-top: 12px;
+    margin-top: 16px;
     font-size: 16px;
     color: #7c8ba1;
     line-height: 2;
@@ -308,17 +327,21 @@ Quality
     display: flex;
 }
 
+.quality__description--wrapper {
+    display: flex;
+    margin-right: 4rem;
+    width: 50%;
+}
+
 .quality__description {
     display: flex;
     flex-direction: column;
-    width: 50%;
-    margin-right: 4rem;
     padding: 2rem 0;
 }
 
 .quality__button {
-    margin-top: 2rem;
-    padding: 0.75rem 2rem;
+    margin-top: 3rem;
+    padding: 0.85rem 2rem;
     display: inline-block;
     border-radius: 50px;
     font-size: 0.875rem;
@@ -331,12 +354,13 @@ Quality
 
 .quality__wrapper {
     width: 50%;
-    border: 1px solid #e5e7eb;
-    border-radius: 6px;
+    flex-shrink: 0;
 }
 
 .quality__image {
-    max-width: 100%
+    max-width: 100%;
+    border-radius: 4px;
+    border: 1px solid #e5e7eb;
 }
 
 /* 
@@ -353,6 +377,7 @@ STEPS
 
 .steps__image--wrapper {
     width: 50%;
+    flex-shrink: 0;
 }
 
 .steps__image {
@@ -420,6 +445,7 @@ VALUES
 .values__para {
     font-size: 18px;
     line-height: 29px;
+    margin-top: 16px;
 }
 
 .values__info--wrapper {
@@ -446,20 +472,31 @@ VALUES
     line-height: 1.625;
 }
 
+.values__infos--para {
+    margin-top: 1rem;
+    color: rgba(113,128,150);
+    line-height: 1.625;
+    margin-right: 0;
+}
+
 .icon__wrapper--green {
     padding: 8px;
     background-color: rgba(154,230,180);
     border-radius: 999px;
-    height: 36px;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .icon__wrapper--red {
     padding: 8px;
     background-color: rgba(254,178,178);
     border-radius: 999px;
-    height: 36px;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .values__dollar-sign {
@@ -474,6 +511,7 @@ VALUES
 
 .values__figure--wrapper {
     width: 50%;
+    flex-shrink: 0;
 }
 
 .values__image {
@@ -496,6 +534,7 @@ PRICING
     display: flex;
     flex-wrap: wrap;
     margin-top: 4rem;
+    justify-content: space-between;
 }
 
 .plan {
@@ -514,6 +553,7 @@ PRICING
     max-width: 36rem;
     text-align: center;
     line-height: 1.625;
+    margin-top: 8px;
 }
 
 .plan__border-top {
@@ -536,6 +576,7 @@ PRICING
     font-weight: 700;
     font-size: 1.25rem;
     line-height: 1.625;
+    text-transform: uppercase;
 }
 
 .plan__price {
@@ -669,10 +710,20 @@ PRICING
 .testimonial__para {
     font-size: 1.125rem;
     line-height: 1.625;
+    padding-top: 8px;
 }
 
-.testimonial__stars{
+.testimonial--stars{
     margin: 2.5rem 0 0;
+    display: flex;
+}
+
+.stars {
+    margin-right: 0.25rem;
+    display: inline-block;
+    height: 1.25rem;
+    width: 1.25rem;
+    fill: #f6ad55;
 }
 
 .testimonial__heading {
@@ -689,7 +740,7 @@ PRICING
     color: rgba(74,85,104);
 }
 
-.customer__wrapper {
+.customer__info {
     display: flex;
     align-items: center;
 }
@@ -747,6 +798,7 @@ Started
     font-size: 1.875rem;
     font-weight: 700;
     color: #f7fafc;
+    line-height: 45px;
 }
 
 .button__wrapper {
