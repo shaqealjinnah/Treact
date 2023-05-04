@@ -25,6 +25,10 @@ a {
     text-decoration: none;
 }
 
+button {
+    cursor: pointer;
+}
+
 .container {
     padding: 6rem 0 6rem;
 }
@@ -108,14 +112,23 @@ nav {
     font-size: 24px;
     color: #233e63;
     letter-spacing: 0.025em;
+    transition: 300ms;
+}
+
+.nav__logo-header:hover {
+    color: #6415ff;
 }
 
 .nav__link {
+    padding-bottom: 0.25rem;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-color: transparent;
     margin: 0 24px;
     font-size: 14px;
     color: #233e63;
     font-weight: 600;
-    transition: all 150ms ease;
+    transition: 300ms ease;
     letter-spacing: 0.025em;
 }
 
@@ -130,11 +143,19 @@ nav {
     color: white;
     margin-right: 0;
     margin-left: 0;
+    border: 0px;
+    transition: 300ms ease;
 }
 
+
 .nav__link:hover {
-    text-decoration: underline;
     color: rgba(100,21,255);
+    border-color: rgba(100, 21, 255);
+}
+
+.nav__link--primary:hover {
+    color: white;
+    background-color: rgb(80 17 204);
 }
 
 
@@ -220,6 +241,11 @@ header {
     position: relative;
 }
 
+::placeholder, .header__input {
+    opacity: 1;
+    color: rgb(203, 213, 224);
+}
+
 .header__input {
     padding: 1.25rem 12rem 1.25rem 2rem;
     width: 100%;
@@ -230,12 +256,18 @@ header {
     color: #243e63;
     font-size: 100%;
     height: 68px;
+    transition: 300ms;
 
 }
 
-::placeholder, .header__input {
-    opacity: 1;
-    color: rgb(203, 213, 224);
+.header__input:hover {
+    border-color: rgb(160 174 192);
+}
+
+.header__input:focus {
+    border-color: rgb(100 21 255);
+    outline: transparent solid 2px;
+    outline-offset: 2px;
 }
 
 .header__button {
@@ -311,6 +343,7 @@ FEATURES
 .service {
     display: flex;
     width: 30%;
+    align-items: flex-start;
     max-width: 24rem;
     padding: 2rem 0.5rem;
     margin-left: 1rem;
@@ -324,8 +357,6 @@ FEATURES
 }
 
 .service__icon {
-    height: 68px;
-    width: 68px;
     border: 1px solid #e5e7eb;
     padding: 20px;
     border-radius: 50px;
@@ -365,11 +396,12 @@ Quality
 .quality__description {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     padding: 2rem 0;
 }
 
 .quality__button {
-    margin-top: 3rem;
+    margin-top: 48px;
     padding: 0.85rem 2rem;
     display: inline-block;
     border-radius: 50px;
@@ -377,7 +409,6 @@ Quality
     color: #fff;
     background-color: #6415ff;
     border: none;
-    width: 25%;
     font-weight: 700;
 }
 
@@ -393,7 +424,7 @@ Quality
     bottom: 0;
     right: 0;
     z-index: -10;
-    transform: translateX(50%);
+    transform: translate(50%, 10%);
     fill: rgb(100 21 255);
 }
 
@@ -491,6 +522,7 @@ VALUES
 .values__description--wrapper {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     width: 50%;
     margin-right: 4rem;
     padding: 32px 0;
@@ -582,6 +614,7 @@ PRICING
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 40px;
 }
 
 .plans {
@@ -589,6 +622,7 @@ PRICING
     flex-wrap: wrap;
     margin-top: 4rem;
     justify-content: space-between;
+    position: relative;
 }
 
 .plan {
@@ -601,6 +635,18 @@ PRICING
     border: 1px solid #e5e7eb;
     margin-right: 2rem;
     border-radius: 0.5rem;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.1), 0 1px 2px 0 rgba(0,0,0,0.06);
+}
+
+.svg__blob--plan {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -10;
+    width: 16rem;
+    height: 16rem;
+    opacity: .25;
+    transform: translate(-50%, 50%);
 }
 
 .plan__para {
@@ -680,6 +726,20 @@ PRICING
     padding: 2rem 6rem;
     width: 100%;
     text-align: center;
+    background-color: #fff;
+}
+
+.plan__button--box:nth-child(odd) {
+    background: linear-gradient(135deg, rgb(76, 81, 191) 0%, rgb(102, 126, 234) 100%);
+}
+
+.shadow-style {
+    transition: 300ms;
+}
+
+.shadow-style:hover {
+    box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1),0 10px 10px -5px rgba(0,0,0,0.04);;
+    transform: translate(1px, -1px);
 }
 
 .personal__button {
@@ -714,6 +774,11 @@ PRICING
     border: none;
     font-weight: 700;
     width: 100%;
+}
+
+.business__plan--button:hover {
+    background-color: rgb(226 232 240);
+    color: rgb(70 15 179);
 }
 
 .enterprise__plan--button {
@@ -832,6 +897,14 @@ PRICING
     align-items: center;
 }
 
+.shadow--fade {
+    transition: 300ms;
+}
+
+.shadow--fade:hover {
+    background-color: rgb(203 213 224);
+}
+
 .left__button {
     margin: 0 0.75rem;
     border-radius: 50px;
@@ -885,6 +958,16 @@ Started
     margin-bottom: 96px;
 }
 
+.started__row {
+    position: relative;
+}
+
+.svg__blob--wrapper {
+    position: absolute;
+    inset: 0px;
+    overflow: hidden;
+}
+
 .started__wrapper {
     display: flex;
     justify-content: center;
@@ -895,11 +978,36 @@ Started
     border-radius: 0.5rem;
 }
 
+.svg__left-blob--started {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 20rem;
+    width: 20rem;
+    opacity: .5;
+    color: rgb(80 17 204);
+    transform: translate(-5rem, 8rem);
+    z-index: 1;
+}
+
+.svg__right-blob--started {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 20rem;
+    width: 20rem;
+    z-index: 1;
+    opacity: .5;
+    color: rgb(80 17 204);
+    transform: translate(5rem, -16rem);
+}
+
 .started__heading--wrapper {
     width: 60%;
     display: flex;
     max-width: 30rem;
     justify-content: space-between;
+    z-index: 5;
 }
 
 .started__heading{
@@ -925,6 +1033,14 @@ Started
     font-size: 1rem;
     margin-right: 2rem;
     letter-spacing: 0.025em;
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+    z-index: 10;
+    transition: 300ms;
+}
+
+.started__button:hover {
+    background-color: rgb(229 62 62);
+
 }
 
 .contact__button {
@@ -936,6 +1052,13 @@ Started
     font-weight: 700;
     font-size: 1rem;
     letter-spacing: 0.025em;
+    z-index: 10;
+    transition: 300ms;
+}
+
+.contact__button:hover {
+    background-color: rgb(247 250 252);
+    color: rgb(100 21 255);
 }
 
 /* 
@@ -947,6 +1070,37 @@ Footer
 .footer__container {
     background-color: rgba(100,21,255);
     padding: 6rem 2rem 6rem;
+    position: relative;
+}
+
+.footer__svg--blob-wrapper {
+    position: absolute;
+    inset: 0px;
+    overflow: hidden;
+}
+
+.footer__svg--left-blob {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20rem;
+    width: 20rem;
+    opacity: .5;
+    z-index: 1;
+    color: rgb(80 17 204);
+    transform: translate(-5rem, -8rem);
+}
+
+.footer__svg--right-blob {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 20rem;
+    width: 20rem;
+    opacity: .5;
+    z-index: 1;
+    color: rgb(80 17 204);
+    transform: translate(8rem, 12rem);
 }
 
 .links {
@@ -959,6 +1113,7 @@ Footer
     display: flex;
     flex-direction: column;
     justify-content: center;
+    z-index: 5;
 }
 
 .footer__list {
@@ -974,12 +1129,25 @@ Footer
     color: rgba(247,250,252);
 }
 
+.footer__list--link-wrapper {
+    margin-top: 12px;
+}
+
 .footer__list--links {
     font-size: 0.875rem;
     font-weight: 500;
     color: rgba(247,250,252);
     margin-top: 0.75rem;
     padding-bottom: 4px;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-color: transparent;
+    transition: 300ms;
+    cursor: pointer;
+}
+
+.footer__list--links:hover {
+    border-color: #fff;
 }
 
 .footer__line-break {
@@ -1002,17 +1170,20 @@ Footer
     width: 2rem;
     max-width: 100%;
     margin-right: 8px;
+    z-index: 5;
 }
 
 .footer__logo--wrapper {
     display: flex;
     align-items: center;
+    z-index: 5;
 }
 
 .footer__copyright {
     font-size: 1rem;
     font-weight: 500;
     color: rgba(203,213,224);
+    z-index: 5;
 }
 
 .footer__icon-wrapper {
@@ -1021,6 +1192,8 @@ Footer
     background-color: #fff;
     margin-right: 16px;
     display: flex;
+    z-index: 5;
+    cursor: pointer;
 }
 
 .footer__icon-wrapper:last-child {
@@ -1041,4 +1214,164 @@ Footer
     font-weight: 900;
     letter-spacing: 0.05em;
     color: rgba(247,250,252);
+}
+
+/* SMALL LAPTOPS */
+
+@media (max-width: 1024px) {
+    .header__heading {
+        font-size: 2.25rem;
+    }
+
+    .header__para {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .header__img {
+        max-width: 32rem;
+    }
+
+    .header__img--wrapper {
+        display: flex;
+        justify-content: flex-end;
+        align-self: flex-end;
+    }
+
+    .header__trust-badges {
+        padding-right: 64px;
+    }
+
+    .quality__wrapper {
+        align-self: center;
+    }
+
+    .quality__dots--svg {
+        transform: translate(50%, 45%);
+    }
+
+    .plan__button--box {
+        padding: 2rem 4rem;
+    }
+
+    .testimonial__image--wrapper {
+        width: 41.6667%;
+    }
+
+    .tesimonial__description--wrapper {
+        width: 58.33%;
+    }
+
+    .started__wrapper {
+        padding: 6rem 2rem;
+        justify-content: space-between;
+    }
+
+    .started__heading--wrapper {
+        width: 50%;
+    }
+
+    .button__wrapper {
+        width: auto;
+    }
+}
+
+/* Tablets */
+
+@media (max-width: 768px) {
+    .header__row {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .header__description {
+        width: auto;
+        max-width: 32rem;
+        text-align: center;
+    }
+
+    .header__heading {
+        font-size: 30px;
+    }
+
+    .header__para {
+        margin: 20px 0;
+        font-size: 16px;
+    }
+
+    .header__form {
+        margin: 0 auto;
+    }
+
+    .header__trust {
+        margin-top: 48px;
+    }
+
+    .header__trust--para {
+        font-size: 14px;
+    }
+
+    .header__trust-badges {
+        padding-right: 0;
+    }
+
+    .header__img--wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-self: normal;
+        margin-top: 3rem;
+    }
+
+    .features__description--para {
+        font-size: 1rem;
+    }
+
+    .services {
+        justify-content: center;
+    }
+
+    .service {
+        width: 45%;
+    }
+
+    .heading {
+        font-size: 36px;
+    }
+
+    .para {
+        font-size: 16px;
+    }
+
+    .quality__description--wrapper {
+        margin-right: 3rem;
+    }
+
+    .quality__button {
+        margin-top: 32px;
+    }
+
+    .steps__description {
+        margin-left: 3rem;
+    }
+
+    .values__description--wrapper {
+        margin-right: 3rem;
+    }
+
+    .values__para {
+        line-height: 1.625;
+    }
+
+    .values__info--wrapper {
+        margin-top: 0;
+    }
+
+    .values__info--wrapper {
+        flex-direction: column;
+    }
+
+    .values__big--wrapper {
+        margin-top: 40px;
+    }
 }
