@@ -7,6 +7,7 @@
     <title>Treact Project</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/8da41696ec.js" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
 </head>
 
 <body>
@@ -25,6 +26,27 @@
                     <li><a href="#" class="nav__link nav__link--secondary">Login</a></li>
                     <li><a href="#" class="nav__link nav__link--primary">Sign Up</a></li>
                 </ul>
+                <button class="btn__menu" onclick="openMenu()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="burger__menu">
+                        <line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+
+                <div class="menu__backdrop">
+                    <button class="btn__menu btn__menu--close" onclick="closeMenu()">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="close__menu">
+                            <line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                    </button>
+                    <ul class="menu__list--wrapper">
+                        <li class="menu__list"><a href="#" class="menu__link">About</a></li>
+                        <li class="menu__list"><a href="#" class="menu__link">Blog</a></li>
+                        <li class="menu__list"><a href="#" class="menu__link">Pricing</a></li>
+                        <li class="menu__list"><a href="#" class="menu__link">Contact Us</a></li>
+                        <li class="menu__list"><a href="#" class="menu__link">Login</a></li>
+                        <li class="menu__list"><a href="#" class="menu__link">Sign Up</a></li>
+                    </ul>
+                </div>
             </div>
         </nav>
         <header>
@@ -218,7 +240,7 @@
                                 <p class="values__infos--para">We assure you that our templates are designed and created by professional designers.</p>
                             </div>
                         </div>
-                        <button class="quality__button nav__link--primary">Learn More</button>
+                        <button class="quality__button nav__link--primary value__button">Learn More</button>
                     </div>
                     <figure class="values__figure--wrapper">
                         <img src="/assets/values-section.svg" alt="" class="values__image">
@@ -232,7 +254,7 @@
                 <div class="row">
                     <div class="pricing__description">
                         <h5 class="mini-heading">PRICING</h5>
-                        <h2 class="heading">Reasonable & Flexible <span class="purple--text">Plans.</span></h2>
+                        <h2 class="heading pricing--heading">Reasonable & Flexible <span class="purple--text">Plans.</span></h2>
                         <p class="para plan__para">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                     </div>
                     <div class="plans">
