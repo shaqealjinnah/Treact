@@ -1360,6 +1360,14 @@ Footer
         flex-direction: column;
     }
 
+    .btn__menu--close {
+        top: 34px;
+    }
+
+    .steps__dots--svg {
+        width: 5rem;
+    }
+
     .header__description {
         width: auto;
         max-width: 32rem;
@@ -1465,6 +1473,7 @@ Footer
         flex-wrap: nowrap;
         justify-content: center;
         align-items: center;
+        margin-top: 0;
     }
 
     .plan {
@@ -1714,6 +1723,7 @@ Footer
         width: 100%;
         max-width: 28rem;
         margin: 0 auto;
+        margin-top: 4rem;
     }
 
     .mini-heading {
