@@ -48,9 +48,6 @@ button {
     color: rgba(100,21,255);
 }
 
-img {
-}
-
 .mini-heading {
     font-size: 16px;
     color: rgba(100,21,255);
@@ -234,10 +231,6 @@ header {
     
 }
 
-.header__container {
-   
-}
-
 .header__svg--blob {
     position: absolute;
     left: 0px;
@@ -401,7 +394,7 @@ FEATURES
     flex-wrap: wrap;
     max-width: 1024px;
     margin: 0 auto;
-    justify-content: flex-end;
+    justify-content: center;
 }
 
 .service {
@@ -603,6 +596,10 @@ VALUES
     margin-top: 2rem;
 }
 
+.values__big--wrapper {
+    margin-right: 2rem;
+}
+
 .values__wrapper {
     display: flex;
     align-items: center;
@@ -612,11 +609,10 @@ VALUES
     margin-left: 0.75rem;
     font-weight: 700;
     font-size: 1.25rem;
-    color: ##243e63;
+    color: #243e63;
 }
 
 .values__info--para {
-    margin-right: 2rem;
     margin-top: 1rem;
     color: rgba(113,128,150);
     line-height: 1.625;
@@ -689,7 +685,7 @@ PRICING
     display: flex;
     flex-wrap: wrap;
     margin-top: 4rem;
-    justify-content: space-between;
+    justify-content: center;
     position: relative;
 }
 
@@ -791,7 +787,7 @@ PRICING
 }
 
 .plan__button--box {
-    padding: 2rem 6rem;
+    padding: 2rem;
     width: 100%;
     text-align: center;
     background-color: #fff;
@@ -811,7 +807,7 @@ PRICING
 }
 
 .personal__button {
-    padding: 16px 32px;
+    padding: 16px 60px;
     border-radius: 50px;
     font-size: 0.875rem;
     letter-spacing: 0.05em;
@@ -819,7 +815,7 @@ PRICING
     border: none;
     font-weight: 700;
     background: linear-gradient(115deg, rgb(56, 178, 172) 0%, rgb(129, 230, 217) 100%);
-    width: 100%;
+    max-width: 100%;
     color: #fff;
 }
 
@@ -834,14 +830,14 @@ PRICING
 .business__plan--button {
     background-color: rgba(247,250,252);
     color: rgba(100,21,255);
-    padding: 16px 32px;
+    padding: 16px 60px;
     border-radius: 50px;
     font-size: 0.875rem;
     letter-spacing: 0.05em;
     text-transform: uppercase;
     border: none;
     font-weight: 700;
-    width: 100%;
+    max-width: 100%;
 }
 
 .business__plan--button:hover {
@@ -852,14 +848,14 @@ PRICING
 .enterprise__plan--button {
     background: linear-gradient(115deg, rgb(245, 101, 101) 0%, rgb(254, 178, 178) 100%);
     color: #fff;
-    padding: 16px 32px;
+    padding: 16px 60px;
     border-radius: 50px;
     font-size: 0.875rem;
     letter-spacing: 0.05em;
     text-transform: uppercase;
     border: none;
     font-weight: 700;
-    width: 100%;
+    max-width: 100%;
 }
 
 .enterprise__border-top {
@@ -930,7 +926,7 @@ PRICING
 .testimonial__review {
     display: flex;
     justify-content: space-between;
-    aic
+    align-items: center;
 }
 
 .customer__info {
@@ -1286,7 +1282,7 @@ Footer
 
 /* SMALL LAPTOPS */
 
-@media (max-width: 1024px) {
+@media (max-width: 1040px) {
     .header__heading {
         font-size: 2.25rem;
     }
@@ -1319,7 +1315,7 @@ Footer
     }
 
     .plan__button--box {
-        padding: 2rem 4rem;
+        padding: 2rem;
     }
 
     .testimonial__image--wrapper {
@@ -1350,6 +1346,21 @@ Footer
     .btn__menu {
         display: block;
     }
+
+    .plans {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        margin-top: 0;
+    }
+
+    .plan {
+        margin-right: 0;
+        margin-top: 4rem;
+        width: 100%;
+    }
+
 }
 
 /* Tablets */
